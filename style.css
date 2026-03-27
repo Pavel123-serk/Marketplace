@@ -73,3 +73,16 @@ button {
     max-width: 32px;
     max-height: 32px;
 }
+
+/*---Respontive---*/
+
+@media screen and (max-width: 1000px) {
+    #products-grid {
+grid-template-columns: repeat (2, 1fr);
+    }
+}
+@media screen and (max-width: 600px) {
+    #products-grid {
+        grid-template-columns: repeat (1, 1fr);
+    }
+}
