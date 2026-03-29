@@ -1,7 +1,5 @@
-let productsGrid = document.getElementById ('products-grid');
+let productsGrid = document.getElementById('products-grid');
 let productsArray = [];
-const urlParams = new URLSearchParams(window.location.search)
-const id = urlParams.get('id');
 let url = 'https://my-json-server.typicode.com/RobocodeSchool/marketplace';
 
 fetch(url + '/products')
@@ -13,13 +11,13 @@ fetch(url + '/products')
             let pElem = document.createElement('div');
             pElem.classList.add('product');
             pElem.innerHTML = `
-            <h2 class='product-name'>$p.name]</h2>
-            <img class='product-photo' src='${p.photo_url}' alt='${p.name}'>
-            <p class='product-price'><b>Price: </b>${p.price}$</p>
-            <p class='product-description'><b>Description:  </b>${p.description}</p>
-            <a href='userProfile.html?id=${p.autor_id}'>Seller profile</a>
-            <button>Buy</button>
-        `;
+                <h2 class='product-name'>${p.name}</h2>
+                <img class='product-photo' src='${p.photo_url}' alt='${p.name}'>
+                <p class='product-price'><b>Price: </b>${p.price}$</p>
+                <p class='product-description'><b>Description: </b>${p.description}</p>
+                <a href='userProfile.html?id=${p.author_id}'>Seller profile</a>
+                <button>Buy</button>
+            `;
             productsGrid.append(pElem);
         });
-    })        
+    })
