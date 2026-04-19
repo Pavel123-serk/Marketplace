@@ -114,8 +114,26 @@ button {
     max-height: 32px;
 }
 
+#cart-button:hover {
+    background-color: rgb(170, 170, 255);
+}
 
+#cart-button {
+    background: none;
+    border: none;
+    border-radius: 50%;
+    padding: 5px;
+    border: 1px solid #000000;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .5s;
+}
 
+.hide {
+    display: none;
+}
 
 /* -----Responsive----- */
 
