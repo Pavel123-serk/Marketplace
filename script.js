@@ -123,6 +123,9 @@ function openCart() {
     cartProd.classList.toggle('hide');
 }
 
+function openCart() {
+    cartProd.classList.toggle('hide');
+}
 fetch(url + '/products')
     .then(async function (response) {
         let products = await response.json();
